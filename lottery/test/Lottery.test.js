@@ -8,7 +8,7 @@ const { interface, bytecode } = require('../compile')
 let accounts;
 let contract;
 
-beforeEach(async () => {
+beforeEach(async () => {	
 	accounts = await web3.eth.getAccounts()
 	contract = await new web3.eth.Contract(JSON.parse(interface))
 		.deploy({ data: bytecode })

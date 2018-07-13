@@ -1,5 +1,7 @@
 pragma solidity ^0.4.17;
 
+// 0x309098f461e6b2afe4bd41e10b933740ada238e3
+
 contract Lottery {
     address public manager;
     address[] public players;
@@ -21,7 +23,7 @@ contract Lottery {
         require(msg.sender == manager);
         
         uint index = random() % players.length;
-        players[index].transfer(this.balance);
+        players[index].transfer(this.balance);        
     }
 
     function getPlayers() public view returns(address[]) {
