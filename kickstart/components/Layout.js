@@ -13,7 +13,6 @@ export default (props) => {
       </Head>
       <Header />
       {props.children}
-      <h2>Footer</h2>
     </Container>
   )
 }
